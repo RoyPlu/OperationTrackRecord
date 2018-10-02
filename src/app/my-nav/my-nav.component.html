@@ -23,8 +23,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>OperationTrackRecord</span>
+      <img class="navbar-logo" src="assets/icons/logo.png" />
+      <span>Operation Track Record</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <app-search-profile></app-search-profile>
   </mat-sidenav-content>
 </mat-sidenav-container>

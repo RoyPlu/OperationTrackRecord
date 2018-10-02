@@ -7,15 +7,22 @@ import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule } from '@angular/material';
 import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchProfileComponent } from './search-profile/search-profile.component';
+import { SearchProfileService } from './services/search-profile.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyNavComponent,
-    MyDashboardComponent
+    MyDashboardComponent,
+    SearchProfileComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -27,7 +34,7 @@ import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
     MatCardModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [SearchProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

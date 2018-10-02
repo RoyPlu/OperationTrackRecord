@@ -1,0 +1,14 @@
+<div class="container">
+    <div>
+        <input class="form-control" type="text" [(ngModel)]="username" />
+        <button class="btn btn-primary" (click)="showSearchProfile()">Confirm</button>
+    </div>
+    <div class="card" style="width:300px" *ngFor="let profile of profiles, let i = index;">
+            <img class="card-img-top" [src]="'https://ubisoft-avatars.akamaized.net/' + profile.ubisoft_id + '/default_146_146.png'" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title">{{profile.username}}</h4>
+              <p class="card-text">platform: {{profile.platform}}</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+            </div>
+          </div>
+</div>
